@@ -5,6 +5,7 @@ import {
   Text,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Controls(props) {
   const {
@@ -25,10 +26,16 @@ export default function Controls(props) {
     >
       <View style={{opacity: disabled ? 0 : 1}}>
         { component ||
-          <Text style={[textStyles,{fontFamily: 'fontawesome',fontSize:16,color:"#8c7bd1"}]}>
-            { label }
-          </Text>
+          <Icon name={label} color="#8c7bd1" />
+         
+         
         }
+        
+//         { component ||
+//           <Text style={[textStyles,{fontFamily: 'fontawesome',fontSize:16,color:"#8c7bd1"}]}>
+//             { label }
+//           </Text>
+//         }
       </View>
     </TouchableOpacity>
   );
