@@ -25,7 +25,7 @@ export default function Controls(props) {
     >
       <View style={{opacity: disabled ? 0 : 1}}>
         { component ||
-          <Text style={[textStyles]}>
+          <Text style={[textStyles,{fontFamily: 'fontawesome',fontSize:16,color:"#8c7bd1"}]}>
             { label }
           </Text>
         }
